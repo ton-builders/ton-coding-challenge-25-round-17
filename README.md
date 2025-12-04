@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @screenshot1021
+2. 你的主网 TON 钱包地址 = UQCM7ba6FjN_e6NZNxTGoE6dygQtoPBLVGZ4QgJbYGihcggW
 
 
 ## 任务：Cocoon 合约分析
@@ -29,6 +29,25 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 3. 如果能找出代码中潜在的 bug 或者风险点是加分项
 
 ### 你的答案：
+https://github.com/TelegramMessenger/cocoon-contracts/blob/9f712572e889a0aac148159b0a5a89108594c760/contracts_tolk/cocoon_proxy.tolk#L102 
+```
+    val params = self.params.load(); // 解包
+    val workerParams = params.withoutCode(); // 置部分值为 null
+
+    val calculatedWorkerAddress = calculateContractAddress(
+        params.workerScCode!,
+        WorkerStorage {
+            ownerAddress: msg.ownerAddress,
+            proxyAddress: contract.getAddress(),
+            proxyPublicKey: self.proxyPublicKey,
+            state: worker_state_normal,
+            tokens: 0,
+            params: workerParams.toCell(), // 重新打包 cell
+        }.toCell()
+    );
+```
+这里可以把需要置为 null 的部分， 和不需要动的部分，分为两个 cell。 这样可以节省这部分工作。
+涉及到 params.withoutCode() 都可以这样调整
 
 
 
