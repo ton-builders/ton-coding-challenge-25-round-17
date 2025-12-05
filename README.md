@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @dudhhsbshs
+2. 你的主网 TON 钱包地址 = UQBicUiXrZqxzPExSjw4UP4a4ltFscS-cX50SeLj4_eZ-4uN
 
 
 ## 任务：Cocoon 合约分析
@@ -29,7 +29,23 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 3. 如果能找出代码中潜在的 bug 或者风险点是加分项
 
 ### 你的答案：
+主要改进建议：
 
+为所有外部调用增加严格的发送者校验。
+
+加强 TON 转账的 bounce/错误处理。
+
+减少存储写入（仅在值变化时写入）。
+
+限制循环长度，避免 gas DoS。
+
+为关键操作添加事件日志。
+
+增加基础的重入保护，并采用“先更新状态 → 再外部调用”的顺序。
+
+增加测试覆盖，包括失败与 bounce 情况。
+
+潜在风险：未授权调用、未处理的 bounce、大循环 DoS、无效地址、序列化错误。
 
 
 
