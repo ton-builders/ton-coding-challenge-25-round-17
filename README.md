@@ -15,9 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
-
+1. 你的 Telegram 用户名 = @lalyougift
+2. 你的主网 TON 钱包地址 = UQDkSJQ5Pv0-GZoVb4PccNuWXciRsBLSvXJjwhPQ_mXObdSO
 
 ## 任务：Cocoon 合约分析
 ### 任务描述：
@@ -30,7 +29,9 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 
 ### 你的答案：
 
+优化方向： 改善 Cell 存储结构，明确函数可见性（Get 方法），使用详细错误码。
 
+风险警示： 关注 TON 异步消息下的状态修改顺序（防重入），以及合约 NANOTON 余额管理（防 Gas 耗尽）。
 
 
 
