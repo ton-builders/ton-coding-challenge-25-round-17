@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @pupoqq51
+2. 你的主网 TON 钱包地址 = UQCoi-HgIc020dd0_R-ux81z_-2_Y29IhK8R7eYwyAhpsqjN
 
 
 ## 任务：Cocoon 合约分析
@@ -29,6 +29,9 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 3. 如果能找出代码中潜在的 bug 或者风险点是加分项
 
 ### 你的答案：
+Optimization: Prioritize Storage Packing and minimizing Cell I/O to reduce gas costs.
+Critical Security Risk: Enforce Strict Sender Validation on all entry points for proper access control.
+Potential Bug: Check for Unbounded Loops (DoS risk) and ensure all outgoing messages correctly include Forwarding Fees.
 
 
 
