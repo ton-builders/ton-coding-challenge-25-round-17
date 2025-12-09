@@ -15,9 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
-
+1. 你的 Telegram 用户名 = @kooal111
+2. 你的主网 TON 钱包地址 = UQAjKYAsbCbskV_DlGpaQtPpBv78Bo0iITVtAlvD1IU01kDa
 
 ## 任务：Cocoon 合约分析
 ### 任务描述：
@@ -30,7 +29,8 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 
 ### 你的答案：
 
-
+单点故障 (Single Point of Failure - SPOF)	如果所有关键权限（如升级、停止合约、铸造）都集中在一个 owner 地址上，一旦该私钥丢失或被盗，将导致灾难性后果。	考虑使用多重签名钱包 (Multi-sig) 来管理 Owner 地址，或使用 DAO 治理模式分配权限。
+功能暂停/开关 (Pause/Emergency Stop)	如果合约包含 pause 或 stop 功能以应对紧急情况，必须确保其触发机制和恢复机制设计合理且安全。暂停功能必须只能被授权方触发。	确保暂停状态下的资金安全，并且恢复流程清晰可靠，避免永久性锁定资产。
 
 
 
