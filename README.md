@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = UQBGvuZjAitfIxWD4UTPfNdJekRZiSD7u2mbZhYMARsu9F29
+2. 你的主网 TON 钱包地址 = @Vk5035
 
 
 ## 任务：Cocoon 合约分析
@@ -29,7 +29,11 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 3. 如果能找出代码中潜在的 bug 或者风险点是加分项
 
 ### 你的答案：
+消息转发和 Gas 费 (Message Forwarding & Gas Fees): TON 合约需要负责支付出站消息 (outbound messages) 的 Gas 费用。如果合约未能正确计算或保留足够的 TON Coin 来支付未来的消息费用，可能会导致合约“卡住”（无法发送后续消息）。
 
+内部消息身份验证： 必须确保所有内部消息的发送者身份验证是正确的（例如，确保消息来自预期的钱包地址或父合约地址）。TON 合约依赖消息的来源和内容来执行逻辑。
+
+持久化存储限制： TON 合约的存储在单个 cell 中，对其大小和结构有严格的限制。复杂的状态更新可能会因为 cell 操作的复杂度而变得昂贵或难以管理
 
 
 
