@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @beluyy
+2. 你的主网 TON 钱包地址 = UQCGvB-p2uQBRaiAZvdc1h40XSDv1LRAop5FCOft1RtgcAJP
 
 
 ## 任务：Cocoon 合约分析
@@ -30,7 +30,7 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 
 ### 你的答案：
 
-
+建议通过变量打包、缓存存储读取及优化函数可见性来提升 Gas 效率；同时必须严格审查敏感函数的访问控制、验证外部调用的重入保护机制，并检查是否存在因循环迭代导致的拒绝服务（DoS）风险。
 
 
 
