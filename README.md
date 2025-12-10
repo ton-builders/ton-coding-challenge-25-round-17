@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @chargebackoff
+2. 你的主网 TON 钱包地址 = UQDkYCBG1mW7nMCJVaCBKd6X66ZzZyiyXUgAKbHkIKlwzYiv
 
 
 ## 任务：Cocoon 合约分析
@@ -30,7 +30,7 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 
 ### 你的答案：
 
-
+1. 高等级 Reentrancy 防御：严格执行 CEI 模式，确保所有状态更新在外部代币转移（Interaction）之前完成。2. Gas 转发安全：强制使用 send_raw_message 配合 mode: 1 或 mode: 64 进行 TON 转发，防止 Gas 估算错误导致资产锁定。3. 去中心化权限：关键参数修改权限必须由 Multi-sig (多签) + Timelock (时间锁) 机制控制，避免单点故障。
 
 
 
