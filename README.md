@@ -15,8 +15,8 @@ https://t.me/toneachat
 课件地址：https://ton-org.notion.site/Cocoon-2bd5274bd2cf80cbadcac29208639b0f
 
 领奖信息收集：
-1. 你的 Telegram 用户名 = ？
-2. 你的主网 TON 钱包地址 = ？
+1. 你的 Telegram 用户名 = @GUCCINN
+2. 你的主网 TON 钱包地址 = UQCV5pAOjCtk9LnSRXfLMyzH3JMvWOGCDDNfW6tQmFNrccBW
 
 
 ## 任务：Cocoon 合约分析
@@ -29,7 +29,7 @@ https://github.com/TelegramMessenger/cocoon-contracts/tree/main/contracts_tolk
 3. 如果能找出代码中潜在的 bug 或者风险点是加分项
 
 ### 你的答案：
-
+1. 存储结构优化：极致 Gas 节省我们必须针对 TON 的高存储成本进行优化。数据结构紧凑化： 避免为 Worker 或 Epoch 数据使用分散的字典（dict）。应将关联数据（如 stake_amount, reward_accrued, last_update_time）序列化为一个 Slice，并以 Worker 地址作为键存储在主字典中。优势： 将 $N$ 个字段的 $N$ 次存储操作减少到 1 次，大幅降低 Gas 消耗。奖励记录 Merkle Proof 模式： 对于历史或已发放的奖励数据，我们不应存储完整的列表。应采用 Merkle Tree 根哈希 或 累加器（Accumulator） 模式 。Worker 仅需提供证明来申领奖励。优势： 申领操作的 Gas 成本从 $O(N)$ 降低到恒定的 $O(\log N)$ 或 $O(1)$，实现了可扩展性。
 
 
 
